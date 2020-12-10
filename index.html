@@ -36,26 +36,7 @@
 </head>
 
 <body>
-
-
     <script defer src="bundle.js" charset='utf-8'></script>
-    <script>
-        window.electron = false;
-        try {
-            window.ipcRenderer = require('electron').ipcRenderer;
-            window.electron = true;
-            console.log("Running in Electron");
-        } catch (err) {
-            console.log("Running in browser");
-        }
-        window.online = true
-        window.addEventListener("online", function() {
-            window.online = true
-        });
-        window.addEventListener("offline", function() {
-            window.online = false;
-        });
-    </script>
 </body>
 
 </html>
